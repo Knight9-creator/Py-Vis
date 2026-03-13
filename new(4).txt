@@ -1,0 +1,143 @@
+#Collision optimization + early exits 
+
+##Platform Collisions (Landing)
+#        if self.player.vel.y > 0:
+#            hits = pygame.sprite.spritecollide(self.player, self.platforms, False)
+#            if hits:
+#                for platform in hits:
+#                    if (self.player.rect.bottom >= platform.rect.top and 
+#                        self.player.rect.bottom <= platform.rect.top + 15 and
+#                        self.player.vel.y > 0):
+#                        
+#                        self.player.pos.y = platform.rect.top
+#                        self.player.vel.y = 0
+#                        self.player.jump_count = 0  #Reset Jump Count when Grounded.
+#                        
+#                        if not platform.passed:
+#                            mult = 2 if self.player.multiplier_timer > 0 else 1
+#                            self.player.score += (10 * mult)
+#
+#                            if mult == 0:
+#                                pass
+#                            else:
+#                                platform_sound.play()
+#
+#                            platform.passed = True
+#                        break
+
+
+
+#if __name__ == "__main__":
+#    game = Game()
+#    game.run()
+#    pygame.quit()
+
+
+#How can we reduce collision checks? 
+
+#Make a "Last_Value variable that detects the last position you were in without touching anything.
+#We can reduce collision checks by simply checking if we are touching anything in an x radius, then eject in the nearest noncollision spot (last_value). 
+#Followed by a scan of the y radius and eject in the nearest noncollision spot (last_value).
+
+
+
+#Early exit patterns; only check relevant objects; debug hitboxes. 
+
+#if __name__ == "__main__":
+#    game = Game()
+#    game.run()
+#    pygame.quit()
+
+
+##Defeat Enemy
+#        enemy_hits = pygame.sprite.spritecollide(self.player, self.enemies, False)
+#        for enemy in enemy_hits:
+#            #Check if hitting from top (Stomp, or when player velocity is falling)
+#            if self.player.vel.y > 0 and self.player.rect.bottom < enemy.rect.centery + 10:
+#                enemy.kill()
+#                self.player.bounce()
+#                for _ in range(15):
+#                    self.particles.add(Particle(enemy.rect.centerx, enemy.rect.centery, ENEMY_COLOR))
+#            else:
+#                self.player.lives -= 1
+#                self.shake_timer = 10
+#                self.player.pos = pygame.math.Vector2(SCREEN_WIDTH/2, SCREEN_HEIGHT/2)
+#                self.player.vel = pygame.math.Vector2(0, 0)
+#                self.enemies.empty()
+
+
+
+
+##Platform Collisions (Landing)
+#        if self.player.vel.y > 0:
+#            hits = pygame.sprite.spritecollide(self.player, self.platforms, False)
+#            if hits:
+#                for platform in hits:
+#                    if (self.player.rect.bottom >= platform.rect.top and 
+#                        self.player.rect.bottom <= platform.rect.top + 15 and
+#                        self.player.vel.y > 0):
+#                        
+#                        self.player.pos.y = platform.rect.top
+#                        self.player.vel.y = 0
+#                        self.player.jump_count = 0  #Reset Jump Count when Grounded.
+#                        
+#                        if not platform.passed:
+#                            mult = 2 if self.player.multiplier_timer > 0 else 1
+#                            self.player.score += (10 * mult)
+#
+#                            if mult == 0:
+#                                pass
+#                            else:
+#                                platform_sound.play()
+#
+#                            platform.passed = True
+#                        break
+
+
+#Reduce checks and add a debug overlay for object count. 
+
+
+#Below is the code for how we check for collision with the platform and how we handle it.
+
+##Platform Collisions (Landing)
+#        if self.player.vel.y > 0:
+#            hits = pygame.sprite.spritecollide(self.player, self.platforms, False)
+#            if hits:
+#                for platform in hits:
+#                    if (self.player.rect.bottom >= platform.rect.top and 
+#                        self.player.rect.bottom <= platform.rect.top + 15 and
+#                        self.player.vel.y > 0):
+#                        
+#                        self.player.pos.y = platform.rect.top
+#                        self.player.vel.y = 0
+#                        self.player.jump_count = 0  #Reset Jump Count when Grounded.
+#                        
+#                        if not platform.passed:
+#                            mult = 2 if self.player.multiplier_timer > 0 else 1
+#                            self.player.score += (10 * mult)
+#
+#                            if mult == 0:
+#                                pass
+#                            else:
+#                                platform_sound.play()
+#
+#                            platform.passed = True
+#                        break
+
+
+
+#For object count, we have a list, where we handle all the sprites, such as the enemies, platforms, particles, etc.
+#We use an overlay as an GUI, where we state all the states and have things such as player position, and data overall.
+
+
+
+
+#Add a simple ‘region’ rule (only check nearby x-range). 
+
+#The x-range is static, but the camera_y always is decreasing, thus causing the Screen to increase in height.
+
+
+
+#What metric tells you if your game is lagging? 
+
+#An FPS (frames per second) counter.
