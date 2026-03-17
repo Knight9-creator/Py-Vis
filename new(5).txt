@@ -1,0 +1,41 @@
+#Measure performance: FPS + timing 
+
+FPS = 60
+Timing = almost always between 59-61
+
+#What does FPS mean and why does it matter? 
+
+#FPS means Frames per Second. This matters so we can tell how many frames something takes per second. In this case, the "something" is the game overall.
+
+
+#clock.get_fps(); time.perf_counter for code blocks. 
+
+
+
+#import time
+#FPS = 60
+#300 Frames per Second.
+#self.multiplier_timer = 300 #5 Seconds (300/FPS)
+
+#time.perf_counter is in the new code for Business Scale.
+#We use this to count for latency and FPS
+
+
+#Record baseline FPS; apply one optimization; re-measure. 
+
+#60 = FPS baseline
+#One Optimization is when we change the FPS based on the device being used, the amount of code to run, and sprites.
+#FPS typical range = 58-62
+
+#Record results in a table: before/after + explanation. 
+
+Before: FPS Baseline = 60
+After: FPS Counting Range is between 58-62.
+
+Before, we had a baseline that, when the project is ran, we assume that the FPS is constantly 60.
+After, we had a baseline to start with, but a counter so we can see the latency and the FPS range, which is in the range of 58-62.
+
+#What change improved performance the most? Evidence? 
+
+#The decreasing size of the fonts in the UI allowed for us to add more stats for user convenience, such as Latency & FPS.
+#Evidence is the new stats in the UI when the project is ran. Allows the user to understand what's happening easier.
