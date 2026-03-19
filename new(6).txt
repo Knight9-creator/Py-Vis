@@ -1,0 +1,35 @@
+#Capstone: performance report + clean code 
+
+FPS Typical Range: 58-62
+Latency Range: 1-3 (Based on what we've seen so far.)
+We fixed the UI code, so that the user can easily tell the stats that the user needs to know, such as latency, fps, double jump being unlocked, etc.
+
+#Evidence checklist: screenshots + numbers. 
+
+Evidence is the new FPS (58-62) and Latency (1-3) visuals in the UI code.
+
+#Write a 1-page performance report with claims + evidence. 
+
+The primary objective of the latest UI update was to bridge the gap between technical stability and player perception. 
+While the engine was already performing well, the lack of visual feedback often left users uncertain about the fluidity of their experience. 
+By integrating real-time Latency and FPS indicators, we have heightened the "feel" of the game, creating a more polished and professional user experience.
+Claim is that the new Latency & FPS visuals allowed the game to feel more polished for a better user experience.
+Evidence is the new FPS (58-62) and Latency (1-3) visuals in the UI code.
+
+#Peer review: does evidence support the claims? 
+
+Yes.
+
+#Finalize optimized code + report PDF. 
+
+We fixed the UI code, so that the user can easily tell the stats that the user needs to know, such as latency, fps, double jump being unlocked, etc.
+
+The primary objective of the latest UI update was to bridge the gap between technical stability and player perception. 
+While the engine was already performing well, the lack of visual feedback often left users uncertain about the fluidity of their experience. 
+By integrating real-time Latency and FPS indicators, we have heightened the "feel" of the game, creating a more polished and professional user experience.
+Claim is that the new Latency & FPS visuals allowed the game to feel more polished for a better user experience.
+Evidence is the new FPS (58-62) and Latency (1-3) visuals in the UI code.
+
+#What would you optimize next and why? 
+
+I would optimize the UI to fit more cleanly so that the game feels polished for the user.
